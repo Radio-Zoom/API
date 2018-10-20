@@ -12,6 +12,12 @@
  */
 
 
+<?php
+
+// These 2 functions can be used to read all available Stats Data from your Icecast2 Server
+// The XML Parser requires to use Admin Password but than has access to all mountpoints, even those that are hidden.
+// The JSON File access can be used on unhidden mount points only.
+
 error_reporting(0);
 
 // Access Icecast Admin Stats XML structure
@@ -80,4 +86,12 @@ function getStreamInfo($icecastserver, $icecastmount){
 	}
 	return $stream;
 	}
+
+function getStreamMonitor($mairlistrest, $restcommand){
+		
+	if($json = file_get_contents($mairlistrest.$restcommand)){
+		$jsondecoded = (json_decode( $json , true ));	
+	}
+	return $jsondecoded;
+}	
 ?>
