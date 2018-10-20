@@ -14,6 +14,7 @@ $mount1 = '/192k.mp3' ; //your radio's mount point, with the leading "/"
 $mount2 = '/192k-backup.mp3' ; //your radio's mount point, with the leading "/"
 $adminpass = 'Your-Really-S3cure-P4ssw0rd' ; // your icecast admin password to get the full XML
 
+$mairlistrest = 'https://your-web-server.net/path-to/json-pass.php?read='; // this links to the JSON pass php from the mairlst-html-control
 
 
 ?>
