@@ -11,8 +11,8 @@
  */
 
 header('Access-Control-Allow-Origin: *');
-require('function.inc.php');
-require('config.inc.php');
+require('include/function.inc.php');
+require('include/config.inc.php');
 
 $s1 = getAdminInfo($server1, $adminpass);
 
